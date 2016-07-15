@@ -1,0 +1,146 @@
+
+function formatLongDate(date){
+	var year = date.slice(0,4);
+	var month = date.slice(5,7);
+	var day = date.slice(8,10);
+
+//  K is the year (1801 <= K <= 2099)
+// M is the month (1 <= M <= 12)
+// I is the day of the month (1 <= I <= 31)
+// //JD =	367K - <(7(K+<(M+9)/12>))/4> + <(275M)/9> + I + 1721013.5 + UT()/24 - 0.5sign(100K+M-190002.5) + 0.5
+// var UT = Universal Time in Hours
+
+	switch(month) {
+		case "01":
+			month = "Jan."
+			break;
+		case "02":
+			month = "Feb."
+			break;
+		case "03":
+			month = "Mar."
+			break;
+		case "04":
+			month = "Apr."
+			break;
+		case "05":
+			month = "May."
+			break;
+		case "06":
+			month = "June"
+			break;
+		case "07":
+			month = "July"
+			break;
+		case "08":
+			month = "Aug."
+			break;
+		case "09":
+			month = "Sept."
+			break;
+		case "10":
+			month = "Oct."
+			break;
+		case "11":
+			month = "Nov."
+			break;
+		case "12":
+			month = "Dec."
+			break;
+		default :
+			console.log(ERROR);
+			break;
+	}
+
+	return month + " " + day + ", " +  year;
+}
+
+//============= JUNK =====================================================
+
+	// solData.maxTempF = [spans[0], convertFahrenheit(data.max_temp), spans[1], degSymbol + "F"];
+	// solData.minTempF = [spans[2], convertFahrenheit(data.min_temp), spans[3], degSymbol + "F"];
+	// solData.maxTempK = [spans[0], convertKelvin(data.max_temp), spans[1], "K"];
+	// solData.minTempK = [spans[2], convertKelvin(data.min_temp), spans[3], "K"];
+
+	//Pressure
+	//solData.pressurePa = [spans[4], data.pressure, spans[5], "Pa"];
+	// solData.pressureAtm = [spans[4], convertAtm(data.pressure), spans[5], "atm"];
+	// solData.pressuremBar = [spans[4], convertmBar(data.pressure), spans[5], "mBar"];
+	
+
+	// //var maxTemp = document.getElementById("maxTemp");
+	// solData.maxTempC[0].innerText = solData.maxTempC[1];
+	// solData.maxTempC[2].innerText = solData.maxTempC[3];
+
+	// //var minTemp = document.getElementById("minTemp");
+	// solData.minTempC[0].innerText = solData.minTempC[1];
+	// solData.minTempC[2].innerText = solData.minTempC[3];
+
+	//PRESSURE
+	//var pressure = document.getElementById("pressure");
+	// solData.pressurePa[0].innerText = solData.pressurePa[1];
+	// solData.pressurePa[2].innerText = solData.pressurePa[3];
+
+	// temps = {
+	// 	celsius: [DOM_Value_Location, value, DOM_Unit_Location, unit]
+	// 	farenheit: [DOMLocation, value, unit]
+	// 	kelvin: [DOMLocation, value, unit]
+	// }
+
+	// var tempUnits = document.querySelectorAll(".tempUnitCol");
+	// var tempValues = document.querySelectorAll(".tempValue");
+
+	// for (var i = 0; i < tempUnits.length; i++) {
+	// 	tempUnits[i].innerText = degSymbol + "C";
+	// 	toggleUnits(data.max_temp, tempUnits, i);
+	// }
+
+// function toggleUnits(num, arr, index){
+// 	var degSymbol = String.fromCharCode(176);
+
+// 	arr[index].addEventListener("click", function(){
+// 		if(arr[index].innerText == degSymbol + "C"){
+// 			latestMaxTemp.textContent = convertFahrenheit(num);
+// 			arr[index].innerText = degSymbol + "F";
+// 		}
+		
+// 		else if(arr[index].textContent == degSymbol + "F"){
+// 			latestMaxTemp.textContent = convertKelvin(num);
+// 			arr[index].innerText = "K";			
+// 		}
+		
+// 		else if(arr[index].textContent == "K"){
+// 			latestMaxTemp.textContent = num;
+// 			arr[index].innerText = degSymbol + "C";	
+// 		}
+// 	})
+// }
+
+// atmo_opacity:"Sunny"
+// earthDate:"2016-06-28"
+// maxTempC:Array[2]
+// maxTempF:Array[2]
+// maxTempK:Array[2]
+// minTempC:Array[2]
+// minTempF:Array[2]
+// minTempK:Array[2]
+// pressureAtm:Array[2]
+// pressurePa:Array[2]
+// pressuremBar:Array[2]
+// sol:1384
+
+
+
+	//PRESSURE
+	//var pressure = document.getElementById("pressure");
+	// pressure.innerText = solData.pressurePa[0];
+	// pressureUnit.innerText = solData.pressurePa[1];
+
+		// <div class="section group">
+		// 	<div class="col span90">
+		// 		<span id="maxTemp"></span>
+		// 	</div>
+		// 	<div class="col span10 tempUnitCol" >
+		// 		<span class="tempUnitCol" id="maxTempUnit"></span>
+		// 	</div>
+		// </div>

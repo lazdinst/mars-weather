@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mars Weather</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/weather-icons.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+	<link rel="icon" href="img/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/151734b2bf.js"></script>
+</head>
+ 
+<body>
+
+<!-- <div class="header">
+	<h1 id="headerH1">Mars Weather</h1>
+	<h2 id="headerH2">Transmitted by the <a href="https://en.wikipedia.org/wiki/Curiosity_(rover)">Curiosity Rover on Mars</a></h2>
+</div> -->
+<!-- <div id="stripe">
+	<button type="button" name="resetButton">Generate</button>
+	<span id="message"></span>
+</div> -->
+<div class="cd-body" id="cd-body">
+	<div class="currentSol" id="currentSol">
+		<!--  Card Header -->
+		<div class="section group cardHeader">
+			<div class="col span50">
+			</div>
+			<div class="col span50">
+				<div id="latestSol"></div>
+				<div id="latestEarth"></div>
+			</div>
+		</div>
+
+		<!--  Temperature Max-->
+		<div class="section group">
+			<div class="col span75">
+			<div class="col weatherIcon" id="atmo_opacity">
+				<i class="wi wi-day-sunny" id="atmo_icon"></i>
+			</div>
+				<div class="valueText" >
+					<span id="maxTemp"></span>
+				</div>
+				<span class="attText">TEMP. HIGH</span>
+			</div>
+			<div class="col span20" >
+				<div class="unitButton" id="maxTempUnit"></div>
+			</div>
+		</div>
+
+		<!--  Temperature  Min -->
+		<div class="section group">
+			<div class="col span75" >
+				<div class="valueText" id="minTemp"></div>
+				<span class="attText">TEMP. LOW</span>
+			</div>
+			<div class="col span20">
+				<div class="unitButton" id="minTempUnit"></div>
+				<!-- <span class="unitButton" id="minTempUnit"></span> -->
+			</div>
+		</div>
+
+		<!--  Pressure -->
+		<div class="section group">
+			<div class="col span75">
+				<div class="valueText"  id="pressure"></div>
+				<span class="attText">PRESSURE</span>
+			</div>
+
+			<div class="col span20">
+				<div class="unitButton" id="pressureUnit"></div>
+			</div>
+		</div>
+
+		<!-- Sunrise and Sunset -->
+		<div class="atmotext" id="atmoText"></div>
+		<div class="section group">
+			<div class="col span50">
+				<i class="wi wi-sunrise solarDayIcon solarDay"></i>
+				<p>Sunrise</p>
+				<div class="solarDay" id="sunRise"></div>
+			</div>
+			<div class="col span50">
+				<i class="wi wi-sunset solarDayIcon"></i>
+				<p>Sunset</p>
+				<div class="solarDay" id="sunSet"></div>
+			</div>
+		</div>
+
+		<!-- Get the Image on this day -->
+<!-- 		<div class="section group">
+			<a href="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01004/opgs/edr/fcam/FLB_486615455EDR_F0481570FHAZ00323M_.JPG" target="_blank">
+				<div class="roverImg" id="roverImgButton">
+				Curiosity Camera
+				</div>
+			</a>
+		</div> -->
+		<div class="section group">
+		<div class="col span50">
+			<div id="leftArrow" class="solArrow"><</div>
+		</div>
+		<div class="col span50">
+			<div id="rightArrow" class="solArrow">></div>
+		</div>
+	</div>
+	</div>
+</div> 
+
+<!-- <div class="container">
+	<div class="card"></div>
+	<div class="card"></div>
+	<div class="card"></div>
+	<div class="card"></div>
+	<div class="card"></div>
+	<div class="card"></div>
+	<div class="card"></div>
+</div>  -->
+
+</body>
+<script src="mars.js"></script>
+	<!-- <script src="curiosity.js"></script> -->
+
+</html>
